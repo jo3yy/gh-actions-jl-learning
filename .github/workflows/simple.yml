@@ -11,8 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
-        run: echo "Hello World:"
+        run: echo "Hello World"
       - name: multi-line script
         run: | #multi-line
           node -v
           npm -v
+      - name: python commands
+        run: |
+          import platform
+          print(patform.processor())
+        shell: python
